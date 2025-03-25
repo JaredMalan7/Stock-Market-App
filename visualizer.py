@@ -15,7 +15,7 @@ def plot_closing_prices(df: pd.DataFrame, ticker: str, folder: str = "results"):
     # Calculate 7-day moving average and add it as a new column
     df["7-day MA"] = df["Close"].rolling(window=7).mean()
 
-    # Create a line plot of closing price and moving average
+    # Creates a line plot of closing price and moving average
     plt.figure(figsize=(10, 5))
     plt.plot(df.index, df["Close"], label="Closing Price", color='blue')
     plt.plot(df.index, df["7-day MA"], label="7-Day MA", color='orange', linestyle="--")

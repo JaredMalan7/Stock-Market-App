@@ -6,6 +6,10 @@ from visualizer import plot_closing_prices, plot_monthly_avg_close
 from config import DEFAULT_TICKER, DEFAULT_START_DATE, DEFAULT_END_DATE
 from exporter import export_results_to_file
 
+# Force pandas to show all rows and columns in the terminal output
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+
 def main():
     # Prompt the user for stock ticker and date range (use default if left empty)
     ticker = input(f"Enter stock ticker (default: {DEFAULT_TICKER}): ") or DEFAULT_TICKER
@@ -21,7 +25,7 @@ def main():
 
         # Display the first few rows of data
         print("\n Preview of Data:")
-        print(data.head())
+        print(data)
 
         # Run analysis on the data
         results = analyze_stock_data(data)

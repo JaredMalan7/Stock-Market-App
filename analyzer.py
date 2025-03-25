@@ -19,7 +19,7 @@ def analyze_stock_data(df: pd.DataFrame):
     highest_close = df['Close'].max()
     # Volatility (how much the stock moves up/down on average)
     volatility = df['Close'].std()
-    # Calculate longest streak of days where the stock closed higher than
+    # Calculate longest streak of days where the stock closed higher
     longest_streak = find_longest_positive_streak(df)
 
     # New insight: Day with highest trading volume

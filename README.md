@@ -14,7 +14,7 @@ Users can:
 
 ---
 
-## 🎥 YouTube Video Demo
+## 🎥 [YouTube Video Demo](https://youtu.be/nGETP0d6VFU)
 
 ---
 
